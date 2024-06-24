@@ -1,0 +1,28 @@
+@import '../inc/variables';
+
+.header {
+  &__content {
+    padding: 3.4rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    font-family: $gilroy-semibold;
+    font-size: 1.4rem;
+  }
+  
+  &__date, &__time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 141px;
+    height: 40px;
+    background-color: $dark-blue;
+    gap: 0.6rem;
+    border-radius: 1rem;
+  }
+}
