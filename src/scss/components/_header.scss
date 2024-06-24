@@ -6,6 +6,10 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &__logo {
+    cursor: pointer;
+  }
   
   &__info {
     display: flex;
