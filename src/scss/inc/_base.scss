@@ -13,4 +13,10 @@ body {
   display: flex;  
   flex-direction: column;
   color: $white;
+  background-color: $dark-gray;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 928px;
 }
