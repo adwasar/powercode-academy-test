@@ -1,3 +1,64 @@
+@import '../inc/variables';
+
 .form-block {
-  grid-area: 1 / 2 / 3 / 3; 
+  padding: 5.1rem 6rem;
+  display: flex;
+  flex-direction: column;
+  grid-area: 1 / 2 / 3 / 3;
+  background-color: $midnight-blue;
+  border-radius: 1rem;
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    font-family: $gilroy-semibold;
+    font-size: 2.2rem;
+    line-height: 2.5991rem;
+  }
+
+  &__title > span {
+    color: $red;
+  }
+
+  & > form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+
+  & > form > input {
+    padding: 1.4rem 2.2rem;
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    color: $white;
+    background-color: $dark-gray;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  &__button {
+    padding: 1.7rem 2.2rem;
+    color: $white;
+    background-color: $red;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-family: $gilroy-semibold;
+  }
+
+  &__privacy-policy {
+    margin: 2rem auto 0;
+    font-family: $gilroy-regular;
+    font-size: 1.2rem;
+    color: $white-transparent;
+    text-align: center;
+    max-width: 19rem;
+  }
+
+  &__privacy-policy > a {
+    color: inherit;
+    line-height: 149%;
+    text-underline-offset: 2px;
+  }
 }
