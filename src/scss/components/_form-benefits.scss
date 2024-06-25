@@ -6,9 +6,13 @@
   flex-direction: column;
   gap: 1.6rem;
   max-width: 42rem;
-
   @include v-md {
-    margin: 3rem auto 0;
+    margin: 3.5rem auto 0;
+    flex-direction: column-reverse;
+  }
+
+  @include v-sm {
+    max-width: 22rem;
   }
 
   &__item {
@@ -29,13 +33,9 @@
     font-size: 1.2rem;
     line-height: 120%;
     font-family: $gilroy-semibold;
-  }
-
-  &__item-name {
-    margin: 0.3rem 0 0;
-    font-size: 1.2rem;
-    line-height: 120%;
-    font-family: $gilroy-semibold;
+    @include v-sm {
+      font-size: 1.4rem;
+    }
   }
 
   &__item-name > span {
@@ -50,11 +50,20 @@
 
   &__gift-img {
     margin-top: 0.6rem;
+
+    @include v-md {
+      height: 4.58rem;
+      width: auto;
+    }
   }
 
   &__item:first-child {
     .form-benefits__item-name {
       font-size: 1.3rem;
+
+      @include v-sm {
+        font-size: 1.4rem;
+      }
     }
 
     .form-benefits__item-text {

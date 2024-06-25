@@ -1,6 +1,6 @@
 .main {
   &__content {
-    padding: 7.9rem 0 0.1rem;
+    padding: 7.9rem 0 13.8rem;
     display: grid;
     grid-template-columns: 42.7rem 36.6rem;
     justify-content: space-between;
@@ -12,7 +12,7 @@
     }
 
     @include v-md {
-      padding: 0 0 0.1rem;
+      padding: 0 0 4.5rem;
       grid-template-columns: 1fr;
       gap: 0;
     }
