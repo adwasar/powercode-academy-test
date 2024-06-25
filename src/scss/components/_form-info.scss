@@ -14,12 +14,17 @@
     font-family: $gilroy-medium;
     background-color: $bright-blue;
     border-radius: 0.5rem;
-
     @include v-lg {
       font-size: 1.2rem;
       border-radius: 0.3rem;
       line-height: 2.4rem;
-      padding: 0.3rem 1rem 0.3rem 1rem;
+      padding: 0.45rem 1.1rem 0.45rem 1.1rem;
+    }
+
+    @include v-md {
+      position: relative;
+      left: -0.6rem;
+      margin: 0.3rem auto;
     }
   }
 
@@ -32,6 +37,7 @@
   &__webinar > span {
     @include v-lg {
       margin-top: 0.1rem;
+      line-height: normal;
     }
   }
 
@@ -44,6 +50,12 @@
     @include v-lg {
       font-size: 5.27rem;
     }
+
+    @include v-md {
+      font-size: 5.27rem;
+      text-align: center;
+      line-height: 115%;
+    }
   }
 
   &__subtitle {
@@ -54,7 +66,8 @@
     font-size: 2.1949rem;
     font-family: $gilroy-semibold;
     @include v-lg {
-      font-size: 1.6rem;
+      margin-top: 0.3rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -66,6 +79,8 @@
     font-family: $gilroy-semibold;
     @include v-lg {
       font-size: 1.6rem;
+      margin: 0.813rem 1.8rem 0.813rem 2.9rem;
+      line-height: 100%;
     }
   }
 
@@ -84,6 +99,7 @@
       width: 7.626rem;
       height: 2.753rem;
       top: -0.5rem;
+      left: -1rem;
     }
   }
 
@@ -93,8 +109,12 @@
     font-family: $gilroy-regular;
     line-height: 148%;
     @include v-lg {
-      margin-top: 2rem;
+      margin-top: 2.4rem;
       font-size: 1.4rem;
+    }
+
+    @include v-md {
+      text-align: center;
     }
   }
 
