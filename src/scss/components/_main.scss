@@ -3,7 +3,12 @@
     padding: 7.9rem 0 0.1rem;
     display: grid;
     grid-template-columns: 42.7rem 36.6rem;
-    justify-content: space-between  ;
+    justify-content: space-between;
     gap: 4rem 0;
+
+    @include v-lg {
+      grid-template-columns: 38rem 32.6rem;
+      gap: 3rem 0;
+    }
   }
 }
