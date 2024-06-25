@@ -1,0 +1,55 @@
+@import '../inc/variables';
+
+.form-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  &__item {
+    display: flex;
+    gap: 1.7rem;
+  }
+
+  &__img {
+    flex: 5.1rem 0 0;
+  }
+
+  &__item-name {
+    margin: 0.3rem 0 0;
+    font-size: 1.2rem;
+    line-height: 120%;
+    font-family: $gilroy-semibold;
+  }
+
+  &__item-name {
+    margin: 0.3rem 0 0;
+    font-size: 1.2rem;
+    line-height: 120%;
+    font-family: $gilroy-semibold;
+  }
+
+  &__item-name > span {
+    color: $bright-blue;
+  }
+
+  &__item-text {
+    margin: 0.1rem 0 0;
+    font-size: 1.2rem;
+    line-height: 160%;
+  }
+
+  &__gift-img {
+    margin-top: 0.6rem;
+  }
+
+  &__item:first-child {
+    .form-benefits__item-name {
+      font-size: 1.3rem;
+    }
+
+    .form-benefits__item-text {
+      line-height: 148%;
+      margin-top: 0.2rem;
+    }
+  }
+}
