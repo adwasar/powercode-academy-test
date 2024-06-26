@@ -1,4 +1,6 @@
 .main {
+  position: relative;
+  z-index: 1;
   &__content {
     padding: 7.9rem 0 13.8rem;
     display: grid;
@@ -15,6 +17,16 @@
       padding: 0 0 4.5rem;
       grid-template-columns: 1fr;
       gap: 0;
+    }
+  }
+
+  &__bg-icons {
+    position: absolute;
+    top: 114px;
+    right: 22px;
+    z-index: -1;
+    @include v-md {
+      display: none;
     }
   }
 }
