@@ -1,0 +1,30 @@
+.ellipse-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  @include v-md {
+    display: none;
+  }
+}
+
+.ellipse-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  @include v-md {
+    display: none;
+  }
+}
+
+.ellipse-bottom {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  z-index: -1;
+  @include v-md {
+    display: inline-block;
+  }
+}

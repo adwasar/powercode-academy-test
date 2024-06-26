@@ -4,7 +4,7 @@
   margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1.5rem;
   max-width: 42rem;
   @include v-md {
     margin: 3.5rem auto 0;
@@ -20,7 +20,7 @@
     gap: 1.7rem;
 
     @include v-lg {
-      gap: 1.1rem;
+      gap: 1rem;
     }
   }
 
@@ -57,7 +57,7 @@
     }
   }
 
-  &__item:first-child {
+  &__item:nth-child(1) {
     .form-benefits__item-name {
       font-size: 1.3rem;
 
@@ -68,7 +68,14 @@
 
     .form-benefits__item-text {
       line-height: 148%;
-      margin-top: 0.2rem;
+      margin-top: 0.1rem;
+    }
+  }
+
+  &__item:nth-child(2) {
+    .form-benefits__item-text {
+      line-height: 148%;
+      margin-top: 0.3rem;
     }
   }
 }
