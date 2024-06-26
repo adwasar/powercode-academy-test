@@ -28,3 +28,15 @@
     display: inline-block;
   }
 }
+
+.bg-footer {
+  bottom: 0;
+  left: 50%;
+  max-width: 144rem;
+  width: 100%;
+  transform: translate(-50%);
+  position: absolute;
+  @include v-md {
+    display: none;
+  }
+}
