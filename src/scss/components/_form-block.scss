@@ -101,6 +101,30 @@
   &__privacy-policy > a {
     color: inherit;
     line-height: 149%;
-    text-underline-offset: 2px;
+    text-underline-offset: 0.2rem;
+  }
+}
+
+.iti {
+  &__tel-input {
+    width: 100%;
+    padding: 1.4rem 2.2rem 1.4rem 7rem !important;
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    color: $white;
+    background-color: $dark-gray;
+    border: none;
+    border-radius: 0.5rem;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+  
+  &__selected-country-primary {
+    padding: 0 2.2rem;
+  }
+
+  &__country-container {
+    color: $black;
   }
 }
