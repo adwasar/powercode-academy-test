@@ -55,9 +55,32 @@ from.addEventListener('submit', (event) => {
   }
 
   console.log(iti.getNumber())
-
+  
   if (isValid) {
-    console.log(phoneInput)
+    const token = '7053559021:AAG8U1_4HcctmRlgvqulcArv0SZq01oqo3c'
+    const chatId = '6163382681'
+    const message = `Name: ${nameInput.value}\nPhone: ${iti.getNumber()}\nEmail: ${emailInput.value}`
+
+    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.ok) {
+        console.log('Message sent successfully')
+      } else {
+        console.error('Error sending message:', data)
+      }
+    })
+    .catch(error => console.error('Error:', error))
   } else {
+    console.log('Form validation failed')
   }
 })
