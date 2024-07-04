@@ -1,5 +1,5 @@
 // import intlTelInput from 'intl-tel-input'
-import intlTelInput from "intl-tel-input/intlTelInputWithUtils"
+import intlTelInput from 'intl-tel-input/intlTelInputWithUtils'
 
 import 'intl-tel-input/build/css/intlTelInput.css'
 import './scss/main.scss'
@@ -16,7 +16,7 @@ const emailError = document.getElementById('email-error')
 
 const iti = intlTelInput(phoneInput, {
   initialCountry: 'ua',
-  strictMode: true
+  strictMode: true,
 })
 
 from.addEventListener('submit', (event) => {
@@ -37,7 +37,7 @@ from.addEventListener('submit', (event) => {
   if (!phoneInput.value.trim()) {
     phoneError.style.display = 'block'
     phoneError.innerText = 'Поле не заполнено'
-  } else if (!phoneRegex.test(phoneInput.value.trim())) {
+  } else if (!phoneRegex.test(phoneInput.value.replace(/\s+/g, ''))) {
     phoneError.style.display = 'block'
     phoneError.innerText = 'Поле должно быть заполнено в международном формате'
   } else {
@@ -54,32 +54,34 @@ from.addEventListener('submit', (event) => {
     emailError.style.display = 'none'
   }
 
-  console.log(iti.getNumber())
-  
+  console.log(phoneInput.value.replace(/\s+/g, ''))
+
   if (isValid) {
     const token = '7053559021:AAG8U1_4HcctmRlgvqulcArv0SZq01oqo3c'
     const chatId = '6163382681'
-    const message = `Name: ${nameInput.value}\nPhone: ${iti.getNumber()}\nEmail: ${emailInput.value}`
+    const message = `Name: ${nameInput.value}\nPhone: ${iti.getNumber()}\nEmail: ${
+      emailInput.value
+    }`
 
     fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         chat_id: chatId,
-        text: message
+        text: message,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.ok) {
+          console.log('Message sent successfully')
+        } else {
+          console.error('Error sending message:', data)
+        }
       })
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.ok) {
-        console.log('Message sent successfully')
-      } else {
-        console.error('Error sending message:', data)
-      }
-    })
-    .catch(error => console.error('Error:', error))
+      .catch((error) => console.error('Error:', error))
   } else {
     console.log('Form validation failed')
   }
